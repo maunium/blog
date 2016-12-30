@@ -1,0 +1,13 @@
+baseurl = "https://maunium.net/blog"
+title = "mauBlog"
+languageCode = "en-us"
+disqusShortname = "maunium"
+copyright = "Copyright (c) 2016, Tulir Asokan; all rights reserved."
+MetaDataFormat = "yaml"
+
+[author]
+    name = "Tulir Asokan"
+
+[indexes]
+    tag = "tags"
+    topic = "topics"
