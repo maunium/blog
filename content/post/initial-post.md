@@ -17,4 +17,4 @@ Hello. I'm Tulir.
 
 I'm a programmer, GNU/Linux user, sysadmin and a fan of Star Trek and Doctor Who.
 
-I'll be writintg various tutorials and other possibly interesting and/or useful things here.
+I'll be writing various tutorials and other possibly interesting and/or useful things here.
