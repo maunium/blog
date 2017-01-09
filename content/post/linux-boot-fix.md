@@ -19,6 +19,9 @@ While GRUB usually works just fine, there can be cases where everything doesn't
 work as expected and you might just find yourself in a situation where you
 can't get GRUB to work, especially if you have more than one OS installed.
 
+Capital letters in commands in the following instructions are variables which
+you should replace with appropriate values for your setup.
+
 1. Boot into a live environment
 2. Mount your root partition into `/mnt`: `sudo mount /dev/sdXY /mnt` where X
    is the number of the disk and Y is the lowercase letter of the partition.
@@ -47,21 +50,22 @@ can't get GRUB to work, especially if you have more than one OS installed.
 5. If you have an EFI partition, mount it into `/mnt/boot/efi`:
    `sudo mount /dev/sdXY /mnt/boot/efi`.
 
-   To determine if you have an EFI partition, simply type
-   `sudo fdisk -l | grep EFI`.
+   To determine if you have an EFI partition, simply use
+   `sudo fdisk -l | grep -i efi`.
    If you have an EFI partition, the first column in the output will be the full
    path to the EFI partition (i.e. what you replace `/dev/sdXY` in the command
    with)
-6. Now mount the special Linux directories to `mnt`:
+6. Mount the special Linux directories to `mnt`:
    ```bash
    for i in proc sys dev dev/pts run
-   do sudo mount -o bind /$i /mnt/$i
+   do
+     sudo mount -o bind /$i /mnt/$i
    done
    ```
    You may replace newlines with semicolons (`;`) to write the script in one
    line:
    `for i in proc sys dev dev/pts run; do sudo mount -o bind /$i /mnt/$i; done`
-7. Then [`chroot`](https://linux.die.net/man/1/chroot) into `/mnt`:
+7. [`chroot`](https://linux.die.net/man/1/chroot) into `/mnt`:
    `sudo chroot /mnt`
 8. Finally fix the GRUB installation: `sudo grub-install /dev/sdX` where `X` is
    the same as `X` in step 4 or step 2.
