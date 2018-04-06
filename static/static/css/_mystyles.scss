@@ -112,7 +112,7 @@ article > footer {
   border: 1px solid #faa;
   color: #fff;
   display: block;
-  font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+  font: bold 81.25% Raleway, sans-serif;
   margin: 0.05em 0 0.075em 0;
   padding: 0.5em 3.5em;
   text-align: center;
@@ -299,7 +299,7 @@ blockquote {
 }
 
 blockquote:before {
-       display: block;
+    display: block;
     content: "\201C";
     position: absolute;
     font-size: 1000%;
@@ -326,46 +326,6 @@ blockquote cite:before {
 }
 
 // SOCIAL SIDEBAR STUFF
-
-a.rss { color:$rss; background:#fff;}
-a.twitter { color:$twitter; background: #fff;}
-a.facebook { color:$facebook; background: #fff;}
-a.github { color:$github; background: #fff; }
-a.googleplus { color:$googleplus; background: #fff; }
-a.stumbleupon { color:$stumbleupon; background: #fff;}
-a.linkedin { color:$linkedin; background: #fff; }
-a.subscribemail { color:$subscribemail;background: #fff;}
-a.slideshare { color:$slideshare; background: #fff; }
-a.reddit { color:$reddit - 40; background: #fff; }
-a.delicious { color:$delicious; background: #fff; }
-
-
-a.rss:hover { background:$rss; color:#fff;}
-a.twitter:hover { background:$twitter; color:#fff;}
-a.facebook:hover { background:$facebook; color:#fff;}
-a.github:hover { background:$github; color:#fff;}
-a.googleplus:hover { background:$googleplus; color: #fff; }
-a.stumbleupon:hover { background:$stumbleupon;color:#fff; }
-a.linkedin:hover { background:$linkedin; color: #fff; }
-a.subscribemail:hover { background:$subscribemail;color:#fff;}
-a.slideshare:hover { background:$slideshare; color: #fff; }
-a.reddit:hover { background:$reddit; color: #fff; }
-a.delicious:hover { background:$delicious; color: #fff; }
-
-.social li a:hover span {margin-left:0px; padding-left:6px;}
-.social li a:hover .icon {font-size:100%;}
-
-#social > li > .icon {
-    padding: .2em .2em .4em 1em;
-    color: $clouds;
-    font-size: 100%;
-}
-
-.share .icon, .follow .icon {
-    padding-left: 1em;
-    font-size: .8em;
-    padding-right: .5em;
-}
 
 span.title {
     text-align: left;
@@ -399,32 +359,6 @@ span.subcount {
         border-radius: 10px;
 
     }
-}
-
-#social > li {
-    margin-top: 1em;
-    margin-bottom: .35em;
-}
-
-#social > li > span {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    padding-bottom: .2em;
-}
-
-.social {
-    padding: .3em 0 .3em 0;
-    background: $near-white;
-    text-align:left;
-}
-
-.social > li > a {
-    text-align: left;
-    padding: .1em 0 .1em .5em;
-    background: $near-white;
-    font-size: 90%;
-    line-height: 1.35;
-    @include easein($linktime);
 }
 
 .post h2 {
@@ -470,6 +404,7 @@ span.subcount {
 pre {
     margin-bottom: 1em;
     background-color: ghostwhite;
+    font-family: monospace;
     padding: 1em;
     line-height: 1.4;
     font-size: larger;
