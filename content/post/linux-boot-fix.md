@@ -10,7 +10,6 @@ Keywords:
 - dual boot
 Topics:
 - Tutorial
-Draft: true
 date: 2017-01-10
 disqus_title: Fixing GRUB not loading
 disqus_url: https://maunium.net/blog/linux-grub-fix
