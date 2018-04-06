@@ -1,7 +1,6 @@
 ---
 Section: post
 Url: resizing-qcow2-images
-Slug: resizing-qcow2-images
 Title: Resizing KVM qcow2 images
 Description: How to expand and shrink KVM qcow2 disk images.
 Keywords:
@@ -72,15 +71,15 @@ image, so 110gb total.
    If the image created in the previous step is larger than the combined
    partitions on the old image, `virt-resize` will inform you of a surplus and
    create a new partition. You can still terminate the process without data
-   loss and go back to step #3 to create a smaller image.  
-     
+   loss and go back to step #3 to create a smaller image.
+   
    If the image is smaller than the partitions, `virt-resize` will fail and
    inform you how much space needs to be added. In this case, you must create
    a larger image in step #3.
 
 5. Start your VM. There may be some disk errors related to the stored block
-   lengths. `fsck` should be able to automatically fix them.  
-     
+   lengths. `fsck` should be able to automatically fix them.
+   
    If `virt-resize` created an extra partition, you can now use a partition
    editor to delete it and add the space to another partition.
 

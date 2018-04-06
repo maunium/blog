@@ -1,7 +1,6 @@
 ---
 Section: post
 Url: linux-grub-fix
-Slug: linux-grub-fix
 Title: Fixing GRUB not loading
 Description: Fixing GRUB not loading
 Keywords:

@@ -1,7 +1,6 @@
 ---
 Section: post
 Url: initial-post
-Slug: initial-post
 Title: Initial post
 Description: The first post
 Keywords:
