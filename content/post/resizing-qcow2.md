@@ -35,9 +35,10 @@ even need to have the disk space available right away.
 1. Shut down the virtual machine
 
 2. Resize the image with
-
-       qemu-img resize image.qcow2 +SIZE
-
+   ```
+   qemu-img resize image.qcow2 +SIZE
+   ```
+   
    where `SIZE` is the size (e.g. `10G` for 10 gibibytes).
 
 3. Boot into an external live OS and resize the partition. The easiest way to
@@ -61,15 +62,15 @@ image, so 110gb total.
    It should be root-only, so `sudo su` is acceptable in this case.
 
    Create the new smaller image:
-   
-       qemu-img create -f qcow2 -o preallocation=metadata newimage.qcow2 NEW_SIZE
-   
+   ```
+   qemu-img create -f qcow2 -o preallocation=metadata newimage.qcow2 NEW_SIZE
+   ```
    where `NEW_SIZE` is the size (`50G` for the example at the start).
 
 4. Resize the image by copying the old image into the new one.
-   
-       virt-resize oldimage.qcow2 newimage.qcow2
-   
+   ```
+   virt-resize oldimage.qcow2 newimage.qcow2
+   ```
    If the image created in the previous step is larger than the combined
    partitions on the old image, `virt-resize` will inform you of a surplus and
    create a new partition. You can still terminate the process without data
