@@ -2,22 +2,24 @@
 Section: post
 Url: linux-grub-fix
 Slug: linux-grub-fix
-Title: Fixing GRUB on GNU/Linux
-Description: ""
+Title: Fixing GRUB not loading
+Description: Fixing GRUB not loading
 Keywords:
-- GNU/Linux
-- GRUB
+- linux
+- grub
+- dual boot
 Topics:
 - Tutorial
 Draft: true
-date: 2016-12-30
-disqus_title: Fixing GRUB on GNU/Linux
+date: 2017-01-10
+disqus_title: Fixing GRUB not loading
 disqus_url: https://maunium.net/blog/linux-grub-fix
 ---
 
 While GRUB usually works just fine, there can be cases where everything doesn't
 work as expected and you might just find yourself in a situation where you
-can't get GRUB to work, especially if you have more than one OS installed.
+can't get GRUB to load, especially if you have more than one OS installed.
+These instructions have helped me fix most that problem in most cases.
 
 Capital letters in commands in the following instructions are variables which
 you should replace with appropriate values for your setup.
