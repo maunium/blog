@@ -46,10 +46,10 @@ even need to have the disk space available right away.
 ## Shrinking images
 This is a bit more difficult. You will also need to have disk space to fit
 both images at the same time. For example, you want to resize a 100gb
-allocation to 50gb, and your current image has 100gb allocated, shows 60gb used
-from outside (the qcow2 image) and 30gb actually used inside. For the change,
-you'll need to have 50gb space for the resized image and 60gb for the existing
-image, so 110gb total.
+allocation to 50gb, your current image shows 60gb used from outside (the qcow2
+image) and has 30gb actually used inside. For the change, you'll need to have
+50gb space for the resized image and 60gb for the existing image, so 110gb
+total.
 
 1.  Resize the partition (see step #3 of expanding images)
 
