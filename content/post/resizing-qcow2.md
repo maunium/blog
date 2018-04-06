@@ -38,9 +38,8 @@ even need to have the disk space available right away.
    ```
    qemu-img resize image.qcow2 +SIZE
    ```
-   
    where `SIZE` is the size (e.g. `10G` for 10 gibibytes).
-
+   
 3. Boot into an external live OS and resize the partition. The easiest way to
    do this is to use a [GParted](https://gparted.org/download.php) live image
    and [virt-manager](https://virt-manager.org/) to connect to the VM.
@@ -59,8 +58,7 @@ image, so 110gb total.
    thus didn't shut it down already for resizing), shut it down now.
 
 3. KVM/QEMU images are stored in `/var/lib/libvirt/images` by default.
-   It should be root-only, so `sudo su` is acceptable in this case.
-
+   It should be root-only, so `sudo su` is acceptable in this case.  
    Create the new smaller image:
    ```
    qemu-img create -f qcow2 -o preallocation=metadata newimage.qcow2 NEW_SIZE
@@ -74,15 +72,15 @@ image, so 110gb total.
    If the image created in the previous step is larger than the combined
    partitions on the old image, `virt-resize` will inform you of a surplus and
    create a new partition. You can still terminate the process without data
-   loss and go back to step #3 to create a smaller image.
-   
+   loss and go back to step #3 to create a smaller image.  
+     
    If the image is smaller than the partitions, `virt-resize` will fail and
    inform you how much space needs to be added. In this case, you must create
    a larger image in step #3.
 
 5. Start your VM. There may be some disk errors related to the stored block
-   lengths. `fsck` should be able to automatically fix them.
-   
+   lengths. `fsck` should be able to automatically fix them.  
+     
    If `virt-resize` created an extra partition, you can now use a partition
    editor to delete it and add the space to another partition.
 
